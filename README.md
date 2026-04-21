@@ -1,39 +1,18 @@
 # Test App
 
 ## Description
-A Node.js Express API for a task management system.
+This is a simple API for managing users, designed to test megahook with faulty code.
 
-## Getting Started
+## Setup
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Create a `.env` file based on `.env.example`.
+4. Start the application with `npm start`.
+5. Run tests with `npm test`.
 
-### Prerequisites
-- Node.js (v12 or higher)
-- MongoDB
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/test-app.git
-   cd test-app
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file based on `.env.example` and fill in your configuration.
-
-### Running the Application
-```bash
-npm start
-```
-
-### Running with Docker
-```bash
-docker-compose up
-```
-
-### API Endpoints
-- `POST /api/tasks` - Create a new task
-- `GET /api/tasks` - Retrieve all tasks
-- `GET /api/tasks/:id` - Retrieve a task by ID
-- `PUT /api/tasks/:id` - Update a task by ID
-- `DELETE /api/tasks/:id` - Delete a task by ID
+## API Endpoints
+- `GET /api/users`: Get all users
+- `POST /api/users`: Create a new user
+- `GET /api/users/:id`: Get a user by ID
+- `PUT /api/users/:id`: Update a user by ID
+- `DELETE /api/users/:id`: Delete a user by ID

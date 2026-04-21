@@ -1,16 +1,15 @@
 import express from 'express';
-import { json } from 'body-parser';
-import { taskRouter } from './routes/task.routes.js';
 import dotenv from 'dotenv';
-import { errorHandler } from './middleware/error.middleware.js';
+import { router } from './routes';
+import { errorHandler } from './middleware/errorHandler';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(json());
-app.use('/api/tasks', taskRouter);
+app.use(express.json());
+app.use('/api', router);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
