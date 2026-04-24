@@ -1,6 +1,11 @@
 import { Request, Response } from 'express';
 
-const users = [];
+interface User {
+  id: string;
+  [key: string]: unknown;
+}
+
+const users: User[] = [];
 
 export const userController = {
   getAllUsers: (req: Request, res: Response) => {
